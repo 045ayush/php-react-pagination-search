@@ -1,9 +1,5 @@
 # Professional Full Stack Application
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![React](https://img.shields.io/badge/React-18.2.0-blue.svg)](https://reactjs.org/)
-[![PHP](https://img.shields.io/badge/PHP-7.4+-purple.svg)](https://php.net/)
-
 A modern, professional full-stack user search application featuring real-time search, pagination, and responsive design. Built with React frontend and PHP REST API backend.
 
 ## Features

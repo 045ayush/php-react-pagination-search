@@ -1,0 +1,295 @@
+/* Global Styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #ffffff;
+  color: #1a1a1a;
+}
+
+/* App Container */
+.app-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 20px 0;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.app-title {
+  font-size: 2.2rem;
+  font-weight: 300;
+  color: #1a1a1a;
+  margin: 0;
+  margin-bottom: 8px;
+  letter-spacing: -0.02em;
+}
+
+.app-subtitle {
+  font-size: 1rem;
+  color: #666;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* Search Bar Styles */
+.search-container {
+  margin-bottom: 32px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 16px 20px;
+  font-size: 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  background-color: #ffffff;
+  transition: border-color 0.2s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #000;
+}
+
+.search-input::placeholder {
+  color: #999;
+}
+
+/* Results Info */
+.results-info {
+  margin-bottom: 16px;
+  text-align: center;
+  color: #666;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+/* Error Message */
+.error-message {
+  background-color: #fff5f5;
+  color: #d63031;
+  padding: 16px;
+  border-radius: 6px;
+  border: 1px solid #fab1a0;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* Loading Spinner */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px;
+}
+
+.loading-spinner {
+  width: 24px;
+  height: 24px;
+  border: 2px solid #f0f0f0;
+  border-top: 2px solid #000;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-text {
+  margin-left: 12px;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Table Styles */
+.table-container {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-header {
+  background-color: #fafafa;
+}
+
+.table-header th {
+  padding: 16px 20px;
+  text-align: left;
+  font-weight: 500;
+  color: #333;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.table-row {
+  border-bottom: 1px solid #f0f0f0;
+  transition: background-color 0.15s ease;
+}
+
+.table-row:hover {
+  background-color: #fafafa;
+}
+
+.table-row:last-child {
+  border-bottom: none;
+}
+
+.table-cell {
+  padding: 16px 20px;
+  font-size: 0.9rem;
+}
+
+.table-cell.id {
+  font-weight: 500;
+  color: #666;
+  width: 80px;
+}
+
+.table-cell.name {
+  font-weight: 400;
+  color: #1a1a1a;
+}
+
+.table-cell.email {
+  color: #666;
+}
+
+/* No Results */
+.no-results {
+  text-align: center;
+  padding: 80px 20px;
+  color: #999;
+}
+
+.no-results-icon {
+  font-size: 2rem;
+  margin-bottom: 16px;
+  opacity: 0.6;
+}
+
+.no-results-text {
+  font-size: 1rem;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* Pagination Styles */
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  margin: 24px 0 0;
+}
+
+.pagination-button {
+  padding: 8px 12px;
+  border: 1px solid #e0e0e0;
+  background-color: #ffffff;
+  color: #666;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 400;
+  transition: all 0.15s ease;
+  min-width: 36px;
+  text-align: center;
+}
+
+.pagination-button:hover:not(:disabled) {
+  border-color: #000;
+  color: #000;
+}
+
+.pagination-button.active {
+  background-color: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+.pagination-button:disabled {
+  background-color: #fafafa;
+  color: #ccc;
+  cursor: not-allowed;
+  border-color: #f0f0f0;
+}
+
+.pagination-nav {
+  padding: 8px 16px;
+  font-weight: 400;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .app-container {
+    padding: 40px 16px 0;
+  }
+  
+  .app-title {
+    font-size: 1.8rem;
+  }
+  
+  .search-input {
+    padding: 14px 16px;
+  }
+  
+  .table-container {
+    overflow-x: auto;
+  }
+  
+  .table-header th,
+  .table-cell {
+    padding: 12px 16px;
+  }
+  
+  .pagination-container {
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+  
+  .pagination-button {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-container {
+    padding: 32px 12px 0;
+  }
+  
+  .app-title {
+    font-size: 1.6rem;
+  }
+  
+  .table-header th,
+  .table-cell {
+    padding: 10px 12px;
+    font-size: 0.85rem;
+  }
+  
+  .table-cell.email {
+    word-break: break-all;
+  }
+}
